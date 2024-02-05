@@ -1,23 +1,35 @@
-// let students = ["Андрей", "Иван", "Стас"];
-// students[50] = "Индекс 50"
-// console.log(students);
+// const array = [1,2,3,4]
+// console.log(array)
+
+// let person = {
+//     name: "Tom",
+//     age: 18,
+//     hobbies: ["кушать","Спать","Смотреть кино"],
+//     contacts: {
+//         phone: [8800553255,8800553355],
+//         email: ["tom@email.com","tom2@email.com"],
+//         social: "www.github.com"
+//     }
+
+// }
+
+// console.log(`Имя - ${person["name"]}. Возраст - ${person["age"]}`)
+// console.log(person["hobbies"][2])
+// console.log(person['contacts']['email'][1])
 
 
-// let college = [["Андрей", "Иван", "Стас"],[205, 111, 304]];
-// college[1][1] = 112
-// let kab = college[1][1]
-// console.log(kab)
+let college = [
+    {name: "Tom", age: 23, group: "ИС-2-1"},
+    {name: "Bob", age: 20, group: "ИС-2-1"},
+    {name: "Stan", age: 21, group: "ИС-2-1"},
+    {name: "Harry", age: 26, group: "ИС-2-1"}
+]
 
-let number = [1,2,3,4]
+let studentAge = college[0]['age']
+let studentName = college[0]['name']
 
-const countLenght = 3
-
-if (number.length === countLenght) {
-    console.log("ok")
-} else if (number.length < countLenght) {
-    let result = countLenght - number.length
-    console.log(`Длинна вашего массива: ${number.length}. Длинну нужно увеличить до ${countLenght}. Прибавьте к массиву значение ${result}`)
-} else if (number.length > countLenght) {
-    let result_2 = number.length - countLenght
-    console.log(`Длинна вашего массива: ${number.length}. Длинну нужно уменьшить до ${countLenght}. Отнимите от массива значение ${result_2}`)
+if (studentAge>=18) {
+    console.log(`Студент ${studentName} совершеннолетний. Ему ${studentAge}`)
+} else if (studentAge<18) {
+    console.log(`Студент ${studentName} не совершеннолетний. Ему ${studentAge}`)
 }
